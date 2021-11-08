@@ -1,0 +1,21 @@
+.section-home {
+    padding: 0 10.6rem;
+    min-height: 100vh;
+    background: url(../images/home-img.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    align-content: center;
+    @include respond(large) {
+        padding: 0 2rem;
+    }
+    @include respond(medium) {
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+}

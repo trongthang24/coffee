@@ -1,0 +1,36 @@
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    &__box {
+        text-align: center;
+        border: $border;
+        padding: 2rem;
+        &--icons {
+            a {
+                height: 5rem;
+                width: 5rem;
+                line-height: 5rem;
+                font-size: 2rem;
+                border: $border;
+                color: #fff;
+                margin: .3rem;
+                &:hover {
+                    background: $main-color;
+                }
+            }
+        }
+        &--image {
+            padding: 2.5rem 0;
+            img {
+                height: 25rem;
+            }
+        }
+        &--content {
+            h3 {
+                color: #fff;
+                font-size: 2.5rem;
+            }
+        }
+    }
+}

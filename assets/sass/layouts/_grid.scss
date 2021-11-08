@@ -1,0 +1,9 @@
+.row {
+    display: flex;
+    align-items: center;
+    background-color: $color-black;
+    flex-wrap: wrap;
+    .col-1-of-2 {
+        width: 50%;
+    }
+}

@@ -1,0 +1,165 @@
+.header {
+    background-color: $bg;
+    padding: 1.5rem 0;
+    color: $color-white;
+    position: fixed;
+    // width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: $border;
+    z-index: 1000;
+    @include respond(large) {
+        padding: 1.5rem 2rem
+    }
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10.6rem;
+        @include respond(large) {
+            padding: 0;
+        }
+        @include respond(medium) {
+            padding: 0;
+        }
+    }
+    &__logo {
+        img {
+            height: 6rem;
+        }
+    }
+    &__navbar {
+        a {
+            color: $color-white;
+            text-transform: capitalize;
+            font-size: 1.6rem;
+            margin: 0 1rem;
+            &:hover {
+                color: $main-color;
+                border-bottom: .1rem solid $main-color;
+                padding-bottom: .5rem;
+            }
+            @include respond(medium) {
+                color: $color-black;
+                display: block;
+                margin: 1.5rem;
+                padding: .5rem;
+                font-size: 2rem;
+            }
+        }
+        @include respond(medium) {
+            position: absolute;
+            top: 100%;
+            right: -100%;
+            background: #fff;
+            width: 30rem;
+            height: calc(100vh - 9.5rem);
+        }
+        &.active {
+            @include respond(medium) {
+                right: 0;
+            }
+        }
+    }
+    &__icon {
+        cursor: pointer;
+        font-size: 2.5rem;
+        margin-left: 2rem;
+        #menu-btn {
+            display: none;
+            @include respond(medium) {
+                display: inline-block;
+            }
+        }
+        .fas {
+            padding: 0 1rem;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+    &__search {
+        position: absolute;
+        top: 115%;
+        right: 7%;
+        background: $color-white;
+        width: 50rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        transform: scaleY(0);
+        transform-origin: top;
+        @include respond(medium) {
+            width: 90%;
+            right: 2rem;
+        }
+        &--form {
+            height: 100%;
+            width: 100%;
+            font-size: 1.6rem;
+            color: $color-black;
+            padding: 1rem;
+            text-transform: none;
+        }
+        label {
+            position: absolute;
+            right: 0;
+            cursor: pointer;
+            font-size: 2.2rem;
+            margin-right: 1.5rem;
+            color: $color-black;
+            &:hover {
+                color: $main-color;
+            }
+        }
+        &.active {
+            transform: scaleY(1);
+        }
+    }
+    &__cart {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        height: calc(100vh - 9.5rem);
+        width: 35rem;
+        background: #fff;
+        padding: 0 1.5rem;
+        &--item {
+            position: relative;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            .fa-times {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                font-size: 2rem;
+                cursor: pointer;
+                color: $color-black;
+                &:hover {
+                    color: $main-color;
+                }
+            }
+            img {
+                height: 7rem;
+            }
+            .cart-content {
+                h3 {
+                    font-size: 2rem;
+                    color: $color-black;
+                    padding-bottom: .5rem;
+                }
+                &__price {
+                    font-size: 1.5rem;
+                    color: $main-color;
+                }
+            }
+        }
+        &.active {
+            right: 0;
+        }
+    }
+}

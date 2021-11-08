@@ -1,0 +1,21 @@
+.section-home {
+    .heading-primary {
+        @include respond(medium) {
+            top: 40%;
+            left: 15%;
+        }
+        @include respond(small) {
+            left: 0;
+        }
+        &__main {
+            @include respond(medium) {
+                font-size: 4.5rem;
+            }
+        }
+        &__sub {
+            @include respond(medium) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

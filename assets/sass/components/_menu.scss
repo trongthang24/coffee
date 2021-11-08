@@ -1,0 +1,24 @@
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    &__box {
+        padding: 5rem;
+        text-align: center;
+        border: $border;
+        img {
+            height: 10rem;
+        }
+        h3 {
+            color: #fff;
+            font-size: 2rem;
+            padding: 1rem 0;
+        }
+        &:hover {
+            background: #fff;
+            * {
+                color: $color-black;
+            }
+        }
+    }
+}

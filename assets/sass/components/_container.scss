@@ -1,0 +1,12 @@
+.container {
+    margin: 0 10.6rem;
+    @include respond(large) {
+        margin: 0;
+    }
+    @include respond(medium) {
+        margin: 0;
+    }
+    @include respond(small) {
+        margin: 0;
+    }
+}

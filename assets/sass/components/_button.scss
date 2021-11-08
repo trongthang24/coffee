@@ -1,0 +1,19 @@
+.btn {
+    font-size: 1.7rem;
+    background-color: $main-color;
+    color: $color-white;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    cursor: pointer;
+    &:hover {
+        letter-spacing: .2rem;
+    }
+    &--primary {
+        &:hover {
+            letter-spacing: .2rem;
+        }
+    }
+    &--secondary {}
+}
